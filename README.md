@@ -1,4 +1,4 @@
-<h1 align="center">Greetings 🙏, this is Mohan..</h1>
+<h1 align="center">Greetings 🙏, this is Bhuminathan..</h1>
 <h3 align="center">A Passionate Engineer trying to build a successful career..👊</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=bhumi46&label=Profile%20views&color=0e75b6&style=flat" alt="bhumi46" /> </p>
