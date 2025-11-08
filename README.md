@@ -6,7 +6,18 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bhumi46/bhumi46/main/code.gif" width="500" alt="coding gif"/>
+  <img src="https://raw.githubusercontent.com/bhumi46/bhumi46/main/code.gif" width="600" alt="coding animation" />
+</p>
+
+<p align="center">
+  <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" width="65" height="65" />
+  <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="Kubernetes" width="65" height="65" />
+  <img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="AWS" width="65" height="65" />
+  <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="Terraform" width="65" height="65" />
+  <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins" width="65" height="65" />
+  <img src="https://www.vectorlogo.zone/logos/argoprojio/argoprojio-icon.svg" alt="ArgoCD" width="65" height="65" />
+  <img src="https://www.vectorlogo.zone/logos/helmsh/helmsh-icon.svg" alt="Helm" width="65" height="65" />
+  <img src="https://techstack-generator.vercel.app/github-icon.svg" alt="GitHub" width="65" height="65" />
 </p>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=bhumi46&label=Profile%20views&color=0e75b6&style=flat" alt="bhumi46" /> </p>
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=bhumi46" alt="bhumi46" /></a> </p>
