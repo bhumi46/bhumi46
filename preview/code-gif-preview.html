@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code GIF Preview - Modern Formats</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 1200px;
+      width: 100%;
+      padding: 30px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #667eea;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+    
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .format-info {
+      background: #f7f9fc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .format-info h2 {
+      color: #667eea;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    
+    .format-list {
+      list-style: none;
+    }
+    
+    .format-item {
+      padding: 12px;
+      margin-bottom: 8px;
+      background: white;
+      border-radius: 6px;
+      border-left: 4px solid #667eea;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+    
+    .format-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .format-name {
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .format-desc {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .status-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    .status-active {
+      background: #10b981;
+      color: white;
+    }
+    
+    .status-fallback {
+      background: #fbbf24;
+      color: #333;
+    }
+    
+    .instructions {
+      background: #e0e7ff;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .instructions h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+    
+    .instructions code {
+      background: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    
+    .instructions pre {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+    
+    .instructions pre code {
+      padding: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .format-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Code GIF Preview</h1>
+    <p class="subtitle">Responsive preview with automatic format selection</p>
+    
+    <div class="video-wrapper">
+      <video autoplay loop muted playsinline id="codeVideo">
+        <!-- Browser will automatically pick the first supported format -->
+        <source src="../dist/code-av1.webm" type="video/webm; codecs=av01.0.05M.08">
+        <source src="../dist/code-vp9.webm" type="video/webm">
+        <source src="../dist/code.webp" type="image/webp">
+        <source src="../dist/code-h264.mp4" type="video/mp4">
+        <!-- Fallback to optimized GIF -->
+        <img src="../dist/code-optimized.gif" alt="Animated code visualization">
+      </video>
+    </div>
+    
+    <div class="format-info">
+      <h2>📊 Available Formats</h2>
+      <ul class="format-list">
+        <li class="format-item">
+          <div>
+            <div class="format-name">WebM (AV1)</div>
+            <div class="format-desc">Best compression, modern browsers</div>
+          </div>
+          <span class="status-indicator status-active">Preferred</span>
+        </li>
+        <li class="format-item">
+          <div>
+            <div class="format-name">WebM (VP9)</div>
+            <div class="format-desc">Excellent compression, wide support</div>
+          </div>
+          <span class="status-indicator status-active">Recommended</span>
+        </li>
+        <li class="format-item">
+          <div>
+            <div class="format-name">Animated WebP</div>
+            <div class="format-desc">Good compression, image format</div>
+          </div>
+          <span class="status-indicator status-active">Alternative</span>
+        </li>
+        <li class="format-item">
+          <div>
+            <div class="format-name">MP4 (H.264)</div>
+            <div class="format-desc">Universal compatibility</div>
+          </div>
+          <span class="status-indicator status-fallback">Fallback</span>
+        </li>
+        <li class="format-item">
+          <div>
+            <div class="format-name">Optimized GIF</div>
+            <div class="format-desc">Maximum compatibility</div>
+          </div>
+          <span class="status-indicator status-fallback">Last Resort</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="instructions">
+      <h3>🛠️ How to Use</h3>
+      <p>1. Run the conversion script to generate all formats:</p>
+      <pre><code>./scripts/convert-code-gif.sh code.gif dist</code></pre>
+      
+      <p>2. Customize quality settings with environment variables:</p>
+      <pre><code>MAX_WIDTH=1920 FPS=30 CRF_VP9=25 ./scripts/convert-code-gif.sh code.gif dist</code></pre>
+      
+      <p>3. Open this HTML file in a browser to preview the results. The browser will automatically select the best supported format.</p>
+      
+      <p><strong>Note:</strong> Make sure <code>ffmpeg</code> is installed on your system before running the conversion script.</p>
+    </div>
+  </div>
+  
+  <script>
+    // Display which format is actually being used
+    const video = document.getElementById('codeVideo');
+    
+    video.addEventListener('loadedmetadata', () => {
+      // Try to detect which source was loaded
+      const sources = video.querySelectorAll('source');
+      let loadedSource = null;
+      
+      for (const source of sources) {
+        // The video will use the first supported source
+        if (video.canPlayType(source.type)) {
+          loadedSource = source;
+          break;
+        }
+      }
+      
+      if (loadedSource) {
+        console.log('Loaded format:', loadedSource.src);
+        console.log('MIME type:', loadedSource.type);
+      }
+    });
+    
+    video.addEventListener('error', (e) => {
+      console.warn('Video loading error. Make sure to run the conversion script first.');
+      console.warn('Run: ./scripts/convert-code-gif.sh code.gif dist');
+    });
+  </script>
+</body>
+</html>
