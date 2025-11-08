@@ -1,5 +1,13 @@
-<h1 align="center">Greetings 🙏, this is Bhuminathan..</h1>
-<h3 align="center">A Passionate Engineer trying to build a successful career..👊</h3>
+<h1 align="center">Hi 👋, I'm Bhuminathan</h1>
+<h3 align="center">A Passionate DevOps Engineer from India 🇮🇳</h3>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=435&lines=DevOps+Engineer;Cloud+Enthusiast;Kubernetes+%7C+Docker+%7C+Terraform;Always+Learning+New+Things" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="500" alt="coding gif"/>
+</p>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=bhumi46&label=Profile%20views&color=0e75b6&style=flat" alt="bhumi46" /> </p>
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=bhumi46" alt="bhumi46" /></a> </p>
 
